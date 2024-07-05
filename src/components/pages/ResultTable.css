@@ -19,3 +19,9 @@
         font-size: 14px; /* Decrease font size for smaller screens */
     }
 }
+
+
+.chart-container {
+    background: rgb(239, 211, 239);
+  height: 400px;
+}
