@@ -21,7 +21,7 @@ function App() {
           element={<Upload setResponse={setResponse} response={response} />}
         />
         <Route path="/result" element={<Result response={response} />} />
-        <Route path="/record" element={<Record />} />
+        <Route path="/record" element={<Record setResponse={setResponse} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
       </Routes>
