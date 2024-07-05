@@ -1,0 +1,67 @@
+.active {
+    color: white;
+    background-color: #AD7EE2;
+}
+
+nav {
+    background-color: #8926B6;
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center; /* Center items for smaller screens */
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0.5rem 0; /* Add margin between list items for smaller screens */
+}
+
+nav ul li a {
+    display: block;
+    text-align: center; /* Center align text for smaller screens */
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    width: 100%; /* Make links full width for smaller screens */
+}
+
+nav ul li a:not(.active):hover {
+    background-color: #8B46D9;
+    color: white;
+}
+
+.title:not(.active):hover {
+    color: rgba(170, 156, 246, 0.952);
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+         margin-left: 3rem;
+        margin-right: 3rem; 
+       
+    }
+
+    nav ul {
+        flex-direction: row; /* Change back to row layout for larger screens */
+    }
+
+    nav ul li {
+        margin: 0;/* Reset margin for larger screens */
+    
+    }
+
+    nav ul li a {
+        width: auto;  /* Reset width for larger screens */
+    
+    }
+}

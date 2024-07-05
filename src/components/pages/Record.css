@@ -1,0 +1,16 @@
+.searchbar {
+    margin-top: 3.5rem;
+    margin-left: 7.5rem; 
+    border-radius:1.5rem;
+    height: 2rem;
+}
+.btn3 {
+    background-color:  #8926B6;
+    color: white;
+   margin-top: 3.5rem;
+   margin-left: 0.1rem;
+   border-radius: 1.5rem;
+   padding: 0.35rem;
+ 
+  
+}

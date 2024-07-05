@@ -1,0 +1,24 @@
+.Title {
+  color: white;
+  font-weight: bold;
+  font-family: Arial;
+  position: absolute;
+  top: 220px; /* Adjust the top position as needed */
+  left: 60px; /* Adjust the left position as needed */
+}
+
+@media screen and (max-width: 800px) {
+  .Title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    top: 220px; /* Adjust the top position for smaller screens */
+    left: 30px; /* Adjust the left position for smaller screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Title {
+    font-size: 1.25rem; /* Adjust font size for even smaller screens */
+    top: 100px; /* Adjust the top position for even smaller screens */
+    left: 15px; /* Adjust the left position for even smaller screens */
+  }
+}

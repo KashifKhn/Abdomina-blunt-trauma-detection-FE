@@ -1,0 +1,27 @@
+#app {
+  padding: 0rem;
+  text-align: center;
+  width: 100vw;
+}
+
+.App {
+  background-color:white;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url('./Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust the height as needed */
+   margin-right:45rem;
+
+  /* Add media queries for responsiveness */
+  @media (max-width: 768px) {
+    background-image: url('./Background.jpg'); /* Change the image for smaller screens */
+  
+}
+
+    /* Set the initial background image and styles */
+    
+}

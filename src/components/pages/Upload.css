@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+}
+.container1 { 
+    flex:1;
+   background-color: white;
+   margin-top: 3rem;
+   margin-left: 3rem;
+   margin-right: 1rem;
+   background-color: #E7DDFF;
+   border-radius: 0.5rem;
+}
+.container2 {
+    flex:1;
+    background-color: white;
+    margin-top: 3rem;
+   margin-right: 3rem;
+    height: 25rem;
+    background-color: #E7DDFF;
+    border-radius: 0.5rem;
+ }
+ .btn1 {
+    background-color:  #8926B6;
+    color: white;
+   margin-top: 11rem;
+   margin-left: 15.5rem;
+   border-radius: 1.5rem;
+}
+.btn2 {
+    background-color:  #8926B6;
+    color: white;
+   border-radius: 1.5rem;
+   margin-top: 1rem;
+   
+  
+}
+
+.abc {
+    display: flex;
+    flex-direction: row;
+}
+.def{
+    flex:1
+}
+.efg{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    justify-content:space-evenly;    
+}
