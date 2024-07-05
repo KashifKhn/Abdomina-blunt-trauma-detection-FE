@@ -3,6 +3,7 @@ import './Record.css'
 import { ResultTable } from './ResultTable'
 
 export const Record = () => {
+  
   return (
     <div>
       <div>

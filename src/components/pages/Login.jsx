@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [response,setResponse] = useState();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -11,9 +14,11 @@ const LoginForm = ({ onLogin }) => {
       const res = await axios.post("http://127.0.0.1:5000/login", data, {
         headers: {
           "Content-Type": "multipart/form-data",
-        },
+        }
       });
-
+      setResponse(res);
+      localStorage.setItem("auth", JSON.stringify("abc"));
+      navigate("/record");
     } catch (er) {
       console.log(er);
     }
