@@ -28,13 +28,13 @@ export const ResultTable = ({ response }) => {
   const [mergedData, setMergedData] = useState([]);
 
   useEffect(() => {
-    if (response && response.predictions) {
-      const predictions = response.predictions[0];
+    if (response && response?.predictions) {
+      const predictions = response.predictions;
       const updatedData = data.map((item, index) => {
         return {
           ...item,
-          prediction: predictions[index] * 100, // Keep as numerical value
-          predictionString: `${(predictions[index] * 100).toFixed(2)} %`, // Add a string version for display in table
+          prediction: parseFloat(predictions[index]) *100, // Keep as numerical value
+          predictionString: `${(parseFloat(predictions[index] )* 100).toFixed(2)} %`, // Add a string version for display in table
         };
       });
 
@@ -68,7 +68,7 @@ export const ResultTable = ({ response }) => {
     ],
   };
 
-  console.log(chartData);
+
   return (
     <div>
       <div className="table-container">

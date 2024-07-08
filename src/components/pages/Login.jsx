@@ -1,23 +1,38 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 
-const LoginForm = () => {
+const LoginForm = ({setAuth}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [response,setResponse] = useState();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const auth = localStorage.getItem("auth");
+    if(auth){
+      navigate("/record");
+    }
+  }, [])
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const data = new FormData();
+    data.append('email',email)
+    data.append('password',password)
     try {
-      const res = await axios.post("http://127.0.0.1:5000/login", data, {
+      const res = await axios.post("http://127.0.0.1:5000/login", {
+        email,
+        password
+      }, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "Application/json",
         }
       });
       setResponse(res);
-      localStorage.setItem("auth", JSON.stringify("abc"));
+      localStorage.setItem("auth", true);
+      setAuth(true);
       navigate("/record");
     } catch (er) {
       console.log(er);

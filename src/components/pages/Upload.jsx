@@ -24,9 +24,11 @@ export const Upload = ({ setResponse }) => {
           "Content-Type": "multipart/form-data",
         },
       });
+      console.log(res)
       setResponse(res.data);
       navigate("/result");
     } catch (err) {
+      alert('some error occured, the file should be a zipped folder, and the files inside should be dicoms')
       setError(err);
     } finally {
       setIsLoading(false);
@@ -69,7 +71,6 @@ export const Upload = ({ setResponse }) => {
         <Form.Group
           controlId="formFileLg"
           className="mb-3">
-          <Form.Label>Upload file</Form.Label>
           <Form.Control
             type="file"
             size="lg"
@@ -80,10 +81,7 @@ export const Upload = ({ setResponse }) => {
           />
         </Form.Group>
       </div>
-
       <div className="abc">
-        <div className="def"></div>
-        <div className="efg">
           <button
             onClick={submit}
             disabled={isLoading}
@@ -98,7 +96,6 @@ export const Upload = ({ setResponse }) => {
               "Detect"
             )}
           </button>
-        </div>
       </div>
     </div>
   );

@@ -1,3 +1,8 @@
+.record {
+    margin-inline: auto;
+    margin-block: 10rem;
+}
+
 .searchbar {
     margin-top: 3.5rem;
     margin-left: 7.5rem; 
